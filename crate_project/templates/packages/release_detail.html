@@ -301,6 +301,7 @@
                 <div id="sidebar" class="span3">
                     <h3 class="visuallyhidden">{% trans "Downloads" %}</h3>
                     <div class="downloads">
+                        <div class="favorites">{% blocktrans with count=release.package.favorite_set.count|intcomma %}<span class="count">{{ count }}</span> user added in favorites{% endblocktrans %}</div>
                         <div class="package">{% blocktrans with count=release.package.downloads|intcomma %}<span class="count">{{ count }}</span> total downloads{% endblocktrans %}</div>
                         {# Translators: This is used to display how many downloads a package has gotten, e.g. 12 for this version. #}
                         <div class="version">{% blocktrans with count=release.downloads|intcomma %}<span class="count">{{ count }}</span> for this version{% endblocktrans %}</div>
